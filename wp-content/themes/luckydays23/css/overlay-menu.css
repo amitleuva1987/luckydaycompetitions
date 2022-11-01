@@ -1,0 +1,22 @@
+/* Overlay style */
+.overlay { position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; background: #111111; z-index: 10000; }
+.overlay-head-icon { padding: 10px 10px; text-align: right;}
+.overlay-head-icon a { color: #fff; font-size: 20px; line-height: 18px;}
+.overlay-head-icon a:hover,
+.overlay-head-icon a:focus	{ color: #bb8f3a; }
+/* Menu style */
+.overlay > ul { text-align: center; position: relative; -webkit-transform: translateY(-50%); transform: translateY(-50%); max-height: calc(100% - 50px); overflow-y: auto; }
+.overlay > ul > li 	{ padding: 12px 15px; display: block; position: relative; }
+.overlay ul.mobile-menu { margin: 0 30px; }
+.overlay ul li img 	{ margin-bottom: 12px; max-width: 240px; }
+.overlay ul li a 	{ color: #fff; display: block; font-size: 15px; line-height: normal; font-weight: 700; text-transform: uppercase; }
+.overlay ul li.active a,
+.overlay ul li a:hover {  color: #bb8f3a; background: transparent; }
+.overlay .dropdown-menu     { margin-bottom: 15px; width: 100%; background: transparent; position: relative !important; transform: none !important; -webkit-transform: none !important; text-align: center;}
+/* Effects */
+.overlay-hugeinc {opacity: 0; visibility: hidden; -webkit-transition: opacity 0.5s, visibility 0s 0.5s; transition: opacity 0.5s, visibility 0s 0.5s; }
+.overlay-hugeinc.open {opacity: 1; visibility: visible; -webkit-transition: opacity 0.5s; transition: opacity 0.5s;}
+.overlay-hugeinc {-webkit-perspective: 1200px; perspective: 1200px; }
+.overlay-hugeinc > ul { opacity: 0.4; -webkit-transform: translateY(-25%) rotateX(35deg); transform: translateY(-25%) rotateX(35deg); -webkit-transition: -webkit-transform 0.5s, opacity 0.5s; transition: transform 0.5s, opacity 0.5s; }
+.overlay-hugeinc.open > ul {opacity: 1; -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+.overlay-hugeinc.close > ul {-webkit-transform: translateY(25%) rotateX(-35deg); transform: translateY(25%) rotateX(-35deg); }

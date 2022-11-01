@@ -1,0 +1,90 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ul.tickets_numbers {margin: 0 0 1em 0; padding-top: 0; clear: both;}
+ul.tickets_numbers::after { content: ""; clear: both; display: table;}
+ul.tickets_numbers li.tn{ display: block; list-style: none; border: 1px solid #000; padding:1em; float: left; width: 60px; height:60px; text-align: center; margin: 0.5em; cursor: pointer; font-size: 1em; font-weight: 700; white-space: nowrap;}
+ul.tickets_numbers.working, ul.tickets_numbers.working li{ cursor: wait; }
+ul.tickets_numbers li.taken{ background: #ed6363; background: #ed636380; cursor: not-allowed;}
+ul.tickets_numbers li.working{ opacity: 0.4; }
+ul.tickets_numbers li.in_cart{ background: #f2c84c; background: #f2c84cbd; cursor: not-allowed;}
+ul.tickets_numbers li.reserved{ background: #FCE7E7; background: #FCE7E7; cursor: not-allowed;}
+ul.tickets_numbers li.selected{ background: #8bcf69 !important}
+ul.tickets_numbers li:hover{ background: #8bcf69; background: #8bcf697a;}
+ul.tickets_numbers li.taken:hover{ background: #8bcf69;background: #8bcf698f;}
+
+ul.lottery-pn-answers{margin: 0 0 1em 0; padding-top: 0; clear: both; width: 100%}
+ul.lottery-pn-answers li{ display: block; list-style: none; border: 1px solid #000; padding:1em;  width: 100%;  margin: 0 0 4px 0; cursor: pointer; font-size: 1em; font-weight: 700;}
+ul.lottery-pn-answers li.selected{background: #8bcf69}
+ul.lottery-pn-answers li.selected.false{background: #ed6363}
+
+.ticket-tab-bar{ width: 100%; overflow: hidden; }
+.ticket-tab-bar .ticket-tab-bar-item { padding: 8px 16px; float: left; width: auto; border: none; display: block; outline: 0; opacity: 0.6}
+.ticket-tab-bar .ticket-tab-bar-item.ticket-tab-active{opacity: 1}
+.ticketnumber-tab-container{margin:0; padding: 0; list-style: none; display: block;}
+.ticketnumber-tab-container > ul {margin:0; padding: 0;}
+
+.cart.pick-number.hidden-qty .quantity{ display: none; }
+.cart.pick-number.hidden-qty .lucky_dip .quantity{ display: inline-block; }
+div.lucky_dip{ margin-bottom: 10px; }
+div.lucky_dip button:disabled { opacity: 0.5 !important;  cursor: not-allowed !important; }
+
+.lucky-dip-button-second {margin-right: 10px;}
+.lucky-dip-text{margin-bottom: 10px;}
+.alertable .gtc{float: right}
+.alertable-buttons {clear: both; margin-top: 10px;}
+#lottery_answer_drop{width: 100%; padding: 10px}
+
+/**
+ * Elementor support
+ */
+ .woocommerce div.product.elementor .elementor-lucky-dip {
+ 	margin: 0;
+ 	    display: -webkit-box;
+ 	    display: -ms-flexbox;
+ 	    display: flex;
+ 	    -ms-flex-wrap: nowrap;
+ 	    flex-wrap: nowrap;
+ }
+.elementor-lucky-dip--align-right .elementor-lucky-dip {
+	-webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+.elementor-lucky-dip--align-left .elementor-lucky-dip {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+.elementor-lucky-dip--align-center .elementor-lucky-dip {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.elementor-lucky-dip--align-justify .elementor-lucky-dip button{
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+.woocommerce div.product.elementor .elementor-elementor-lucky-dip--align-justify .lucky_dip {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.woocommerce div.elementor-widget-woocommerce-product-lucky-dip .lucky_dip  {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+th.woocommerce-orders-table__header.woocommerce-orders-table__header {min-width: 160px;}
+h4.woocommerce-products-header__title.page-title.mytickets {display: inline-table; margin: 0 15px 0 15px; padding: 5px 25px 5px 25px; }
+header.woocommerce-products-header {margin-bottom: 15px}
+h4.woocommerce-products-header__title.page-title.mytickets a {text-decoration: none;}
+h4.woocommerce-products-header__title.page-title.mytickets.active, h4.woocommerce-products-header__title.page-title.mytickets.active, h4.woocommerce-products-header__title.page-title.mytickets:hover
+{background: #eee}
